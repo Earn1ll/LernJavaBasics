@@ -1,16 +1,16 @@
 package com.company;
 
-import less20.Music;
-import less21.Birds;
-import less21.Crown;
-import less21.Ostrich;
-import less23.AK47;
-import less23.Weapon;
+
+import less24.Boeing737;
+import less24.Mi8;
+import less24.Test;
 
 public class Main {
 
     public static void main(String[] args) {
-        Weapon weapon = new Weapon();
-        AK47 ak47 = new AK47();
+        Mi8 mi8 = new Mi8();
+        Boeing737 boeing737 = new Boeing737();
+        Test test = new Test();
+        test.foo(mi8);
     }
 }
