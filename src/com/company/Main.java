@@ -1,19 +1,28 @@
 package com.company;
 
+import less28.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        String str = new String("Java");
-        System.out.println(str.concat(" Hot!"));
-        System.out.println(str);
-        StringBuilder stringBuilder = new StringBuilder("Java");
-        System.out.println(stringBuilder.append(" Hot"));
-        stringBuilder.setLength(15);
-        System.out.println(stringBuilder.capacity());
-        stringBuilder.insert(1, "G");
-        System.out.println(stringBuilder);
-        stringBuilder.deleteCharAt(1);
-      System.out.println(stringBuilder.reverse());
 
+      Body body = new Body();
+
+      SmallHead smallhead = new SmallHead();
+      MediumHead mediumHead = new MediumHead();
+      LargeHead largeHead = new LargeHead();
+
+      Robot<SmallHead> robot = new Robot<SmallHead>(body,smallhead);
+      Robot<LargeHead> robot1 = new Robot<LargeHead>(body,largeHead);
+
+      robot.getHead().burn();
+      robot1.getHead().turn();
+
+      Robot robot2 = new Robot(body,mediumHead);
+      robot2 = robot1;
+
+      Leg leg = new Leg();
+
+      Robot robot3 = new Robot(body,mediumHead);
     }
 }
