@@ -1,16 +1,29 @@
 package com.company;
 
 
-import less24.Boeing737;
-import less24.Mi8;
-import less24.Test;
+import less25.DollySheep;
 
 public class Main {
 
     public static void main(String[] args) {
-        Mi8 mi8 = new Mi8();
-        Boeing737 boeing737 = new Boeing737();
-        Test test = new Test();
-        test.foo(mi8);
+        DollySheep dollySheep = new  DollySheep();
+        DollySheep dollySheep2 = new  DollySheep();
+
+        dollySheep.setName("Dolly");
+        dollySheep2.setName("Sheep");
+
+        System.out.println(dollySheep.getName());
+        System.out.println(dollySheep2.getName());
+
+
+    }
+    public static DollySheep foo(DollySheep dollySheep2){
+        DollySheep sheep = null;
+        try {
+            sheep =  (DollySheep) dollySheep2.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return sheep;
     }
 }
