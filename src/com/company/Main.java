@@ -11,6 +11,7 @@ public class Main {
         Ostrich ostrich = new Ostrich();
         Crown crown = new Crown();
         ostrich.setName("Ostrich");
-        Birds ostrich2 = new Ostrich();
+        ostrich.walk();
+        ostrich.walk("Hi!");
     }
 }
